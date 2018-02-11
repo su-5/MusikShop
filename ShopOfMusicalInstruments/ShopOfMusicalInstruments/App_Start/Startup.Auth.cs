@@ -11,7 +11,7 @@ using Owin;
 using ShopOfMusicalInstruments.Providers;
 using ShopOfMusicalInstruments.Models;
 
-namespace ShopOfMusicalInstruments
+namespace ShopOfMusicalInstruments 
 {
     public partial class Startup
     {
