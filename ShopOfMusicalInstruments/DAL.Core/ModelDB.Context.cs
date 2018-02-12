@@ -26,5 +26,11 @@ namespace DAL.Core
         }
     
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<NumberString> NumberStrings { get; set; }
+        public virtual DbSet<Picture> Pictures { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Subcategory> Subcategories { get; set; }
     }
 }

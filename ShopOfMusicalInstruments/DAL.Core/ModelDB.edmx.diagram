@@ -6,6 +6,17 @@
     <edmx:Diagrams>
       <Diagram DiagramId="49993b9ff78344ca8f5c936eb86a4391" Name="Diagram1">
         <EntityTypeShape EntityType="MusicDataBaseModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.Brand" Width="1.5" PointX="3.375" PointY="3.5" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.Country" Width="1.5" PointX="3.375" PointY="7" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.NumberString" Width="1.5" PointX="3.375" PointY="9.5" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.Picture" Width="1.5" PointX="3.375" PointY="11.875" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.Product" Width="1.5" PointX="5.625" PointY="2.375" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.Subcategory" Width="1.5" PointX="3" PointY="0.75" />
+        <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_Brand_BrandId" />
+        <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Subcategories_dbo_Categories_CategoriesId" />
+        <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_Country_CountryId" />
+        <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_NumberString_NumberStringId" />
+        <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_Picture_PictureId" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
