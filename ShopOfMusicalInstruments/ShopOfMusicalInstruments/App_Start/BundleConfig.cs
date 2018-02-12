@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace ShopOfMusicalInstruments
+namespace ShopOfMusicalInstruments  
 {
     public class BundleConfig
     {
