@@ -5,12 +5,12 @@
         .module("Web")
         .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
             // Index
-            $stateProvider.state("mainPage/catalog", {
-                url: "/catalog",
+            $stateProvider.state("mainPage/Catalog", {
+                url: "/Сatalog",
                 templateUrl: "Angular/Views/Catalog.html",
-                controller: "catalogController"
+                controller: "CatalogController"
             });
 
-            $urlRouterProvider.otherwise("/catalog");
+            $urlRouterProvider.otherwise("/Catalog");
         }]);
 })();
