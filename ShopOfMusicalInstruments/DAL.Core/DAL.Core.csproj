@@ -143,5 +143,10 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL_Core\" />
+    <Folder Include="DAL_DB\" />
+    <Folder Include="GenericRepository\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
