@@ -64,6 +64,7 @@
           <Property Name="DateCreate" Type="datetime" Nullable="false" />
           <Property Name="DateUpdate" Type="datetime" />
           <Property Name="DateDelete" Type="datetime" />
+          <Property Name="SubcategoriesId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Subcategories">
           <Key>
@@ -122,6 +123,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_dbo_Product_dbo_Subcategories_SubcategoriesId">
+          <End Role="Subcategories" Type="Self.Subcategories" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subcategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SubcategoriesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_Subcategories_dbo_Categories_CategoriesId">
           <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
           <End Role="Subcategories" Type="Self.Subcategories" Multiplicity="*" />
@@ -156,6 +169,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Product_dbo_Picture_PictureId" Association="Self.FK_dbo_Product_dbo_Picture_PictureId">
             <End Role="Picture" EntitySet="Picture" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Product_dbo_Subcategories_SubcategoriesId" Association="Self.FK_dbo_Product_dbo_Subcategories_SubcategoriesId">
+            <End Role="Subcategories" EntitySet="Subcategories" />
             <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Subcategories_dbo_Categories_CategoriesId" Association="Self.FK_dbo_Subcategories_dbo_Categories_CategoriesId">
@@ -202,6 +219,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Product_dbo_Picture_PictureId" Association="MusicDataBaseModel.FK_dbo_Product_dbo_Picture_PictureId">
             <End Role="Picture" EntitySet="Pictures" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Product_dbo_Subcategories_SubcategoriesId" Association="MusicDataBaseModel.FK_dbo_Product_dbo_Subcategories_SubcategoriesId">
+            <End Role="Subcategory" EntitySet="Subcategories" />
             <End Role="Product" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
@@ -264,6 +285,8 @@
           <NavigationProperty Name="Country" Relationship="MusicDataBaseModel.FK_dbo_Product_dbo_Country_CountryId" FromRole="Product" ToRole="Country" />
           <NavigationProperty Name="NumberString" Relationship="MusicDataBaseModel.FK_dbo_Product_dbo_NumberString_NumberStringId" FromRole="Product" ToRole="NumberString" />
           <NavigationProperty Name="Picture" Relationship="MusicDataBaseModel.FK_dbo_Product_dbo_Picture_PictureId" FromRole="Product" ToRole="Picture" />
+          <Property Name="SubcategoriesId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Subcategory" Relationship="MusicDataBaseModel.FK_dbo_Product_dbo_Subcategories_SubcategoriesId" FromRole="Product" ToRole="Subcategory" />
         </EntityType>
         <EntityType Name="Subcategory">
           <Key>
@@ -274,6 +297,7 @@
           <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CategoriesId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="MusicDataBaseModel.FK_dbo_Subcategories_dbo_Categories_CategoriesId" FromRole="Subcategory" ToRole="Category" />
+          <NavigationProperty Name="Products" Relationship="MusicDataBaseModel.FK_dbo_Product_dbo_Subcategories_SubcategoriesId" FromRole="Subcategory" ToRole="Product" />
         </EntityType>
         <Association Name="FK_dbo_Product_dbo_Brand_BrandId">
           <End Type="MusicDataBaseModel.Brand" Role="Brand" Multiplicity="1" />
@@ -335,6 +359,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_dbo_Product_dbo_Subcategories_SubcategoriesId">
+          <End Type="MusicDataBaseModel.Subcategory" Role="Subcategory" Multiplicity="1" />
+          <End Type="MusicDataBaseModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subcategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SubcategoriesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -392,6 +428,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="MusicDataBaseModel.Product">
               <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="SubcategoriesId" ColumnName="SubcategoriesId" />
                 <ScalarProperty Name="DateDelete" ColumnName="DateDelete" />
                 <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
                 <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
