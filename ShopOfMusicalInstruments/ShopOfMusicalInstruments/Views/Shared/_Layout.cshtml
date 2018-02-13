@@ -4,9 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="CACHE-CONTROL" content="NO-STORE">
     <title>Магазин музыкальных инструментов</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
     @Styles.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/angular.min.js")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -14,25 +18,25 @@
 
 </head>
 
-<body>
-
-    <div class="container-fluid" style="background: skyblue; position: fixed; top: 0 ">
+<body ng-app="Web">
+    <div class="container-fluid header">
         <h1>Магазин музыкальных инструментов</h1>
     </div>
 
-    <div class="body-content" style="background:lightblue"></div>
+    <div class="body-content"></div>
     <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
         <div class="container">
             <p class="display-4">Каталог товаров </p>
         </div>
     </div>
+    @RenderBody()
     <footer>
-        <p style="position: absolute; bottom: 0; width: 100%; background-color: lightblue;">
+        <p class="footer">
             &copy; 2018 |  Проект Ткаченко Дмитрия Александровича.
         </p>
 
     </footer>
-    @RenderBody()
 
+    @RenderSection("scripts", required: false)
 </body>
 </html>
