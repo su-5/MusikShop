@@ -26,10 +26,12 @@ namespace DAL.Core
         public System.DateTime DateCreate { get; set; }
         public Nullable<System.DateTime> DateUpdate { get; set; }
         public Nullable<System.DateTime> DateDelete { get; set; }
+        public int SubcategoriesId { get; set; }
     
         public virtual Brand Brand { get; set; }
         public virtual Country Country { get; set; }
         public virtual NumberString NumberString { get; set; }
         public virtual Picture Picture { get; set; }
+        public virtual Subcategory Subcategory { get; set; }
     }
 }

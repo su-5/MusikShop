@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="Web">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
@@ -18,7 +18,7 @@
 
 </head>
 
-<body ng-app="Web">
+<body ng-controller="Web-controller" >
     <div class="container-fluid header">
         <h1>Магазин музыкальных инструментов</h1>
     </div>
@@ -29,6 +29,7 @@
             <p class="display-4">Каталог товаров </p>
         </div>
     </div>
+
     @RenderBody()
     <footer>
         <p class="footer">
