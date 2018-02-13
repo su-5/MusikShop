@@ -214,6 +214,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\App.js" />
+    <Content Include="Angular\AppConfig.js" />
+    <Content Include="Angular\Controllers\CatalogCtrl.js" />
+    <Content Include="Angular\Views\Catalog.html" />
     <Content Include="App_Data\MusicDataBase.mdf" />
     <Content Include="App_Data\MusicDataBase_log.ldf">
       <DependentUpon>MusicDataBase.mdf</DependentUpon>
@@ -1133,7 +1137,7 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Angular\" />
+    <Folder Include="Angular\Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
