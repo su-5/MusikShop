@@ -6,17 +6,24 @@
     background-size: 100%;
 }
 
-.footer { 
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     background-color: lightblue
 }
+
 div.body-content {
     background: lightblue
 }
+
 .header {
     background: skyblue;
     position: fixed;
     top: 0
 }
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
