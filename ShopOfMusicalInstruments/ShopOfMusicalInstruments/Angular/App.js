@@ -13,9 +13,9 @@
             //    $rootScope.loadingIsShow = loadingService.show(); // loading
             //};
 
-           // $rootScope.loadingHide = function () {
-               // $rootScope.loadingIsShow = loadingService.hide();
-         //   };
+            //$rootScope.loadingHide = function () {
+            //    $rootScope.loadingIsShow = loadingService.hide();
+            //};
         }
     ]);
 
