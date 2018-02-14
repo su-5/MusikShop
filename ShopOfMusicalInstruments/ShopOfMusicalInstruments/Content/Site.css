@@ -35,7 +35,7 @@ div.body-content {
     text-shadow: 3px 3px 5px #2c2c2c;
 }
 
-div#carousel {
+/*div#carousel {
     perspective: 1200px;
     background: #100000;
     padding-top: 10%;
@@ -108,4 +108,58 @@ div#carousel ~ span {
     div#carousel ~ span:hover {
         color: #888;
         cursor: pointer;
-    }
+    }*/
+
+#nav *{
+    padding: 0;
+    margin: 0;
+}  
+
+#nav ul{
+    list-style: none;
+}  
+
+#nav li .second{
+    top: 100%;
+    display: none; 
+    position: absolute;
+}  
+
+#nav > ul > li{
+    float: left;
+    position: relative;
+    width: 227px;
+}  
+#nav > ul li a{
+    font-size: 17px;
+    background: #E0E0E4;
+    display: block;
+    padding: 16px 32px 16px 42px;
+    color: #4E4E4F;
+    text-decoration: none;
+}  
+
+#nav li:hover .second{
+
+    display: block;
+
+}
+#nav li a:hover{
+    transition: all 0.4s ease; 
+    color: #ededf2;
+    background: #4e4e4f;
+}
+.block {
+    box-shadow: 0px 0px 10px 0px;
+    background: #fff;
+    text-align: left;
+}
+.auth {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-size: 130%;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 15px;
+}
