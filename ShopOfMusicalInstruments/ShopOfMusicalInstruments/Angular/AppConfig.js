@@ -6,7 +6,7 @@
         .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
             // Index
             $stateProvider.state("mainPage/Catalog", {
-                url: "/Сatalog",
+                url: "/catalog",
                 templateUrl: "Angular/Views/Catalog.html",
                 controller: "CatalogController"
             });
