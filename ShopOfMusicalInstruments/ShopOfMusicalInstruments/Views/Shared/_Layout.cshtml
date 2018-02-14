@@ -9,6 +9,7 @@
     <title>Магазин музыкальных инструментов</title>
     @Scripts.Render("~/bundles/scripts", "~/Angular/main.js")
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/Slider.js")
     @*@Styles.Render("~/Content/css")
         @Styles.Render("~/Content/Site.css")
         @Styles.Render("~/bundles/bootstrap")
@@ -36,20 +37,38 @@
         @Scripts.Render("~/Scripts/angular-ui.js"),*@
 
 
+
 </head>
 
 <body ng-app="Web">
     <div class="container-fluid header">
-        <div class="logo"> <img src="~/Content/image/images.png" alt="logo" height="50" width="300" /></div>
-            <div class="ui-grid-header"><h3>Магазин музыкальных инструментов</h3></div>
+        <div style="float: left" class="logo"> <img src="~/Content/image/images.png" alt="logo" height="55" width="340" /></div>
+        <div style="float: left" class="ui-grid-header"><h1 style="font-style: italic; color:white ">Магазин музыкальных инструментов</h1></div>
+
     </div>
 
-<div class="body-content"></div>
-    <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
-        <div class="container">
+<div class="body-content">
+    <div class="jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
+        <div class="container wrapper">
             <p class="display-4" style="padding-top: 50px">Каталог товаров </p>
         </div>
     </div>
+</div>
+
+<div id="carousel">
+    <figure id="spinner">
+        <img src="~/Content/image/1.jpg" alt="">
+        <img src="~/Content/image/2.jpg" alt="">
+        <img src="~/Content/image/3.jpg" alt="">
+        <img src="~/Content/image/4.jpg" alt="">
+        <img src="~/Content/image/5.jpg" alt="">
+        <img src="~/Content/image/6.jpg" alt="">
+        <img src="~/Content/image/7.jpg" alt="">
+        <img src="~/Content/image/8.jpg" alt="">
+    </figure>
+</div>
+<span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+<span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
 
     @RenderBody()
     <footer>

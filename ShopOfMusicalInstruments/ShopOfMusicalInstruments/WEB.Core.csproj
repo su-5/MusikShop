@@ -232,6 +232,14 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\image\1.jpg" />
+    <Content Include="Content\image\2.jpg" />
+    <Content Include="Content\image\3.jpg" />
+    <Content Include="Content\image\4.jpg" />
+    <Content Include="Content\image\5.jpg" />
+    <Content Include="Content\image\6.jpg" />
+    <Content Include="Content\image\7.jpg" />
+    <Content Include="Content\image\8.jpg" />
     <Content Include="Content\image\images.png" />
     <Content Include="Content\image\фон-для-сайта-1024x576.jpg" />
     <Content Include="Content\ui-bootstrap-csp.css" />
@@ -1094,6 +1102,7 @@
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Slider.js" />
     <Content Include="Scripts\ui-grid.js" />
     <Content Include="Scripts\ui-grid.min.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
