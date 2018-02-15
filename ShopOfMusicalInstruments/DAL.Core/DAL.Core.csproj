@@ -74,6 +74,14 @@
     <Compile Include="Country.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL_Core\DALFactory.cs" />
+    <Compile Include="DAL_Core\DBFactory.cs" />
+    <Compile Include="DAL_Core\IDALFactory.cs" />
+    <Compile Include="DAL_Core\IDbFactory.cs" />
+    <Compile Include="GenericRepositoryModel\Interfaces\IProductDAL.cs" />
+    <Compile Include="GenericRepositoryModel\Repository\ProductDAL.cs" />
+    <Compile Include="GenericRepository\GenericRepository.cs" />
+    <Compile Include="GenericRepository\IGenericRepository.cs" />
     <Compile Include="ModelDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +97,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelDTO\ProductDTO.cs" />
     <Compile Include="NumberString.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
@@ -143,10 +152,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL_Core\" />
-    <Folder Include="DAL_DB\" />
-    <Folder Include="GenericRepository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

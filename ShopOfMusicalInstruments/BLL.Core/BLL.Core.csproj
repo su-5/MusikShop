@@ -40,8 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_Core\Interface\IBLLFactory.cs" />
+    <Compile Include="BLL_Core\Interface\IProductBLL.cs" />
+    <Compile Include="BLL_Core\Repository\BLLFactory.cs" />
+    <Compile Include="BLL_Core\Repository\ProductBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.Core\DAL.Core.csproj">
+      <Project>{bf618398-a9ea-431b-a465-1e7ee7453f27}</Project>
+      <Name>DAL.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
