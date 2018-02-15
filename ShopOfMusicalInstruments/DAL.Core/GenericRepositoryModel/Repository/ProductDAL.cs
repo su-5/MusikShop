@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Core.DAL_Core;
+﻿using DAL.Core.DAL_Core;
 using DAL.Core.GenericRepository;
 using DAL.Core.GenericRepositoryModel.Interfaces;
 

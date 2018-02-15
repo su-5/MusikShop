@@ -230,7 +230,6 @@
     <Content Include="Angular\app.js" />
     <Content Include="Angular\appConfig.js" />
     <Content Include="Angular\Controllers\CatalogCtrl.js" />
-    <Content Include="Angular\Services\loadingService.js" />
     <Content Include="Angular\Views\Catalog.html" />
     <Content Include="App_Data\MusicDataBase.mdf" />
     <Content Include="App_Data\MusicDataBase_log.ldf">
@@ -1084,7 +1083,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\Slider.js" />
     <Content Include="Scripts\tr\angular.integralui.accordion.min.js" />
     <Content Include="Scripts\tr\angular.integralui.checkbox.min.js" />
     <Content Include="Scripts\tr\angular.integralui.combobox.min.js" />
@@ -1141,6 +1139,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Angular\Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

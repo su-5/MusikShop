@@ -44,7 +44,6 @@
     <Compile Include="BLL_Core\Interface\IProductBLL.cs" />
     <Compile Include="BLL_Core\Repository\BLLFactory.cs" />
     <Compile Include="BLL_Core\Repository\ProductBLL.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

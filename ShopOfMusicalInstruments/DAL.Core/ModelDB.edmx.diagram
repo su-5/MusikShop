@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="49993b9ff78344ca8f5c936eb86a4391" Name="Diagram1" ZoomLevel="50">
+      <Diagram DiagramId="49993b9ff78344ca8f5c936eb86a4391" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="MusicDataBaseModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MusicDataBaseModel.Brand" Width="1.5" PointX="3" PointY="3.125" />
         <EntityTypeShape EntityType="MusicDataBaseModel.Country" Width="1.5" PointX="3" PointY="5.75" />
@@ -22,6 +22,8 @@
         <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_NumberString_NumberStringId" />
         <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_Picture_PictureId" />
         <AssociationConnector Association="MusicDataBaseModel.FK_dbo_Product_dbo_Subcategories_SubcategoriesId" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.Role" Width="1.5" PointX="0.625" PointY="3.125" />
+        <EntityTypeShape EntityType="MusicDataBaseModel.User" Width="1.5" PointX="0.625" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

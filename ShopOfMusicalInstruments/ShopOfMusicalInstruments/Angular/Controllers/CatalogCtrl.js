@@ -3,7 +3,7 @@
 
     // controller class definintion
     var catalogController = function ($scope, $rootScope) {
-        $rootScope.loadingShow();
+       
     };
 
     // register your controller into a dependent module 

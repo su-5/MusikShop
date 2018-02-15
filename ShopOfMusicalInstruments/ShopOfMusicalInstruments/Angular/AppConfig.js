@@ -3,7 +3,7 @@
 
     angular
         .module("Web")
-        .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider) {
             // Index
             $stateProvider.state("mainPage/Catalog", {
                 url: "/catalog",

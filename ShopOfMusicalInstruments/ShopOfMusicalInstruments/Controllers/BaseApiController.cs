@@ -4,5 +4,6 @@ namespace ShopOfMusicalInstruments.Core.Controllers
 {
     public class BaseApiController : ApiController
     {
+       
     }
 }

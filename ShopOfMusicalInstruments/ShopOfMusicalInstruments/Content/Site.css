@@ -44,145 +44,73 @@ div.body-content {
     background: rgba(0, 0, 0, 0.4);
 }
 
-.msg-overlay .msg {
-    opacity: 1;
-    position: absolute;
-    top: 30%;
-    left: 41%;
-    width: 19%;
-    height: 10%;
-    background-color: #eee;
-    border-radius: 4px;
-    border: 1px solid #555;
-    text-align: center;
-    font-size: 18px;
-    display: table;
-}
-
-.msg-overlay .msg span {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-/*div#carousel {
-    perspective: 1200px;
-    background: #100000;
-    padding-top: 10%;
-    font-size: 0;
-    margin-bottom: 3rem;
-    overflow: hidden;
-}
-
-figure#spinner {
-    transform-style: preserve-3d;
-    height: 300px;
-    transform-origin: 50% 50% -500px;
-    transition: 1s;
-}
-
-    figure#spinner img {
-        width: 40%;
-        max-width: 425px;
+    .msg-overlay .msg {
+        opacity: 1;
         position: absolute;
-        left: 30%;
-        transform-origin: 50% 50% -500px;
-        outline: 1px solid transparent;
+        top: 30%;
+        left: 41%;
+        width: 19%;
+        height: 10%;
+        background-color: #eee;
+        border-radius: 4px;
+        border: 1px solid #555;
+        text-align: center;
+        font-size: 18px;
+        display: table;
     }
 
-        figure#spinner img:nth-child(1) {
-            transform: rotateY(0deg);
+        .msg-overlay .msg span {
+            display: table-cell;
+            vertical-align: middle;
         }
 
-        figure#spinner img:nth-child(2) {
-            transform: rotateY(-45deg);
-        }
 
-        figure#spinner img:nth-child(3) {
-            transform: rotateY(-90deg);
-        }
-
-        figure#spinner img:nth-child(4) {
-            transform: rotateY(-135deg);
-        }
-
-        figure#spinner img:nth-child(5) {
-            transform: rotateY(-180deg);
-        }
-
-        figure#spinner img:nth-child(6) {
-            transform: rotateY(-225deg);
-        }
-
-        figure#spinner img:nth-child(7) {
-            transform: rotateY(-270deg);
-        }
-
-        figure#spinner img:nth-child(8) {
-            transform: rotateY(-315deg);
-        }
-
-div#carousel ~ span {
-    color: #fff;
-    margin: 5%;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 2rem;
-    transition: 0.6s color;
-    position: relative;
-    margin-top: -6rem;
-    border-bottom: none;
-    line-height: 0;
-}
-
-    div#carousel ~ span:hover {
-        color: #888;
-        cursor: pointer;
-    }*/
-
-#nav *{
+#nav * {
     padding: 0;
     margin: 0;
-}  
+}
 
-#nav ul{
+#nav ul {
     list-style: none;
-}  
+}
 
-#nav li .second{
+#nav li .second {
     top: 100%;
-    display: none; 
+    display: none;
     position: absolute;
-}  
+}
 
-#nav > ul > li{
+#nav > ul > li {
     float: left;
     position: relative;
     width: 227px;
-}  
-#nav > ul li a{
+}
+
+#nav > ul li a {
     font-size: 17px;
     background: #E0E0E4;
     display: block;
     padding: 16px 32px 16px 42px;
     color: #4E4E4F;
     text-decoration: none;
-}  
-
-#nav li:hover .second{
-
-    display: block;
-
 }
-#nav li a:hover{
-    transition: all 0.4s ease; 
+
+#nav li:hover .second {
+    display: block;
+}
+
+#nav li a:hover {
+    transition: all 0.4s ease;
     color: #ededf2;
     background: #4e4e4f;
 }
+
 .block {
     box-shadow: 0px 0px 10px 0px;
     background: #fff;
     text-align: left;
 }
+
 .auth {
     text-align: center;
     width: 100%;
@@ -191,4 +119,17 @@ div#carousel ~ span {
     text-transform: uppercase;
     color: #000;
     margin-top: 15px;
+}
+
+.Login {
+    float: right;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background: skyblue;
+    box-shadow: 0 3px rgb(48, 44, 44);
+    transition: 0.2s;
 }
