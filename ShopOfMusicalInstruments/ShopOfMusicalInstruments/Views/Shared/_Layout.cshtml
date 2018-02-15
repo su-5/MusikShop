@@ -19,15 +19,24 @@
 
     </div>
 
-<div class="body-content">
-    <div class="jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
-        <div class="container wrapper">
-            <p class="display-4" style="padding-top: 50px">Каталог товаров </p>
+    <div class="msg-overlay" ng-show="loadingIsShow">
+        <div class="msg">
+            <span>
+                Обработка данных...
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>
         </div>
     </div>
-</div>
 
-<nav id="nav">
+    <div class="body-content">
+        <div class="jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
+            <div class="container wrapper">
+                <p class="display-4" style="padding-top: 50px">Каталог товаров </p>
+            </div>
+        </div>
+    </div>
+
+    <nav id="nav">
         <ul>
             <li>
                 <a href="#">Струнные</a>
@@ -79,17 +88,17 @@
             </li>
         </ul>
     </nav>
-  
-<div class="block">
-    <form method="post" action="../" style="width: 200px; height: 60px" class="form-group">
-        <span class="auth" style="text-align: center; width: 100%; display: inline-block;">Авторизация</span>
-        <input type="text" class="btn-block  form-control" name="login" id="name" placeholder="Логин" />
-        <input type="password" class="btn-block  form-control" name="password" id="password" placeholder="Пароль" />
-        <input type="submit" class="btn-block  form-control" placeholder="Войти" />
-    </form>
-</div>
 
-@RenderBody()
+    <div class="block">
+        <form method="post" action="../" style="width: 200px; height: 60px" class="form-group">
+            <span class="auth" style="text-align: center; width: 100%; display: inline-block;">Авторизация</span>
+            <input type="text" class="btn-block  form-control" name="login" id="name" placeholder="Логин" />
+            <input type="password" class="btn-block  form-control" name="password" id="password" placeholder="Пароль" />
+            <input type="submit" class="btn-block  form-control" placeholder="Войти" />
+        </form>
+    </div>
+
+    @RenderBody()
     <footer>
         <div class="card-footer footer">
             &copy; 2018 |  Проект Ткаченко Дмитрия Александровича.

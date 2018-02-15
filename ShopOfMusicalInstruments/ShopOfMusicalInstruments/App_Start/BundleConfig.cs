@@ -43,6 +43,7 @@ namespace Web
                 "~/Content/css/integralui.treeview.css",
                 "~/Content/css/integralui.css",
                 "~/Content/css/samples.css",
+                "~/Content/font-awesome.css",
                 "~/Content/bootstrap.css"));
 
             //minimization AngularJs Scripts
