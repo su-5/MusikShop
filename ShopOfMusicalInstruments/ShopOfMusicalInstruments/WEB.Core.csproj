@@ -47,9 +47,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -1075,9 +1072,6 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <Content Include="Scripts\jcs-auto-validate.js" />
-    <Content Include="Scripts\jcs-auto-validate.min.js" />
-    <Content Include="Scripts\jcs-auto-validate.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1115,12 +1109,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\index.cshtml" />
     <Content Include="Views\Registration\index.cshtml" />
-    <Content Include="Scripts\lang\jcs-auto-validate_ru-ru.json" />
-    <Content Include="Scripts\lang\jcs-auto-validate_it-it.json" />
-    <Content Include="Scripts\lang\jcs-auto-validate_fr-fr.json" />
-    <Content Include="Scripts\lang\jcs-auto-validate_en-us.json" />
-    <Content Include="Scripts\lang\jcs-auto-validate_en-gb.json" />
-    <Content Include="Scripts\lang\jcs-auto-validate_de-de.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL.Core\BLL.Core.csproj">

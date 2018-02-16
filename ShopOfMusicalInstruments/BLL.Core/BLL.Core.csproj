@@ -30,12 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,20 +51,6 @@
       <Project>{bf618398-a9ea-431b-a465-1e7ee7453f27}</Project>
       <Name>DAL.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Scripts\jcs-auto-validate.min.js.map" />
-    <None Include="Scripts\lang\jcs-auto-validate_de-de.json" />
-    <None Include="Scripts\lang\jcs-auto-validate_en-gb.json" />
-    <None Include="Scripts\lang\jcs-auto-validate_en-us.json" />
-    <None Include="Scripts\lang\jcs-auto-validate_fr-fr.json" />
-    <None Include="Scripts\lang\jcs-auto-validate_it-it.json" />
-    <None Include="Scripts\lang\jcs-auto-validate_ru-ru.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\jcs-auto-validate.js" />
-    <Content Include="Scripts\jcs-auto-validate.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
