@@ -13,12 +13,19 @@ namespace ShopOfMusicalInstruments
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+       
+
+       
         protected void Application_Start()
         {
+            HttpConfiguration config = GlobalConfiguration.Configuration;
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            config.Formatters.JsonFormatter
+                .SerializerSettings
+                .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
     }
 }

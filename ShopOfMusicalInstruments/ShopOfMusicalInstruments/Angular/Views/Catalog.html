@@ -1,1 +1,20 @@
-﻿
+﻿ <table class="table table-striped table-bordered table-hover" style="background-color: #d5e6f5;">
+    <thead>
+    <tr>
+        <th>Марка</th>
+        <th>Модель</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="value in result">
+        <td>{{value.Brand.Name}}</td>
+        <td>{{value.Country.Name}}</td>
+        <td>{{value.DateManufacture | date:'MM/dd/yyyy'}}</td>
+        <td>{{value.NumberProduct}}</td>
+        <td>{{value.NumberString.Number}}</td>
+        <td>{{value.Price}}</td>
+        <td style="width: 2%;"><button type="button" ng-click="formEdit(true,avto)">Edit</button></td>
+        <td style="width: 5%;"><button type="button" ng-click="formDelete(avto)">Удалить</button></td>
+    </tr>
+    </tbody>
+</table>

@@ -207,8 +207,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -225,6 +224,7 @@
     <Content Include="Angular\app.js" />
     <Content Include="Angular\appConfig.js" />
     <Content Include="Angular\Controllers\CatalogCtrl.js" />
+    <Content Include="Angular\Services\ProductService.js" />
     <Content Include="Angular\Views\Catalog.html" />
     <Content Include="App_Data\MusicDataBase.mdf" />
     <Content Include="App_Data\MusicDataBase_log.ldf">
@@ -1115,6 +1115,10 @@
       <Project>{5c38ce11-1860-41a4-a7c3-513a98f13fdb}</Project>
       <Name>BLL.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL.Core\DAL.Core.csproj">
+      <Project>{BF618398-A9EA-431B-A465-1E7EE7453F27}</Project>
+      <Name>DAL.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -1137,9 +1141,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Angular\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
