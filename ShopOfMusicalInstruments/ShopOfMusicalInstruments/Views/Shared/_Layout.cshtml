@@ -15,13 +15,17 @@
 <body ng-app="Web">
     <div class="container-fluid header">
         <div style="float: left" class="logo"> <img src="~/Content/image/images.png" alt="logo" height="55" width="340" /></div>
-        <div style="float: left" class="ui-grid-header"><h1 style="font-style: italic; color:white ">Магазин музыкальных инструментов</h1></div>
+        <div style="float: left" class="ui-grid-header">
+            <h1 style="font-style: italic; color: white">
+                <a href="http://localhost:21606/">Магазин музыкальных инструментов</a>
+            </h1>
+        </div>
         <p>
-            <a class="Login" href="#">Войти</a>
-            <a class="Login" href="#">Регистрация</a>
+            <a class="Login" href="http://localhost:21606/Login">Войти</a>
+            <a class="Login" href="http://localhost:21606/Registration">Регистрация</a>
         </p>
     </div>
-   
+
     <div class="body-content">
         <div class="jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
             <div class="container wrapper">
@@ -82,15 +86,6 @@
             </li>
         </ul>
     </nav>
-
-    <div class="block">
-        <form method="post" action="../" style="width: 200px; height: 60px" class="form-group">
-            <span class="auth" style="text-align: center; width: 100%; display: inline-block;">Авторизация</span>
-            <input type="text" class="btn-block  form-control" name="login" id="name" placeholder="Логин" />
-            <input type="password" class="btn-block  form-control" name="password" id="password" placeholder="Пароль" />
-            <input type="submit" class="btn-block  form-control" placeholder="Войти" />
-        </form>
-    </div>
 
     @RenderBody()
     <footer>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 
 namespace DAL.Core.ModelDTO
 {
@@ -23,5 +24,6 @@ namespace DAL.Core.ModelDTO
         public NumberString NumberString { get; set; }
         public Picture Picture { get; set; }
         public Subcategory Subcategory { get; set; }
+        
     }
 }

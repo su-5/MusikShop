@@ -123,7 +123,7 @@ namespace DAL.Core.GenericRepository
 
         public IQueryable<T> GetAllWithPaging<TKey>(int pageSize, int page, out int total, Expression<Func<T, TKey>> orderBy, bool isOrderAsc, Expression<Func<T, bool>> filter = null)
         {
-            IQueryable<T> resultFromDb = _dbSet.Where(filter);
+            IQueryable<T> resultFromDb = _dbSet.Where(filter ?? throw new ArgumentNullException(nameof(filter)));
             total = resultFromDb.Count();
 
             IQueryable<T> resultForPaging = isOrderAsc ? resultFromDb.OrderBy(orderBy).Skip((page - 1) * pageSize).Take(pageSize) : resultFromDb.OrderByDescending(orderBy).Skip((page - 1) * pageSize).Take(pageSize);

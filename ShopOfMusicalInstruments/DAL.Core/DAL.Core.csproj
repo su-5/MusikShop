@@ -70,7 +70,6 @@
     <Compile Include="Category.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
