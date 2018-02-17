@@ -99,7 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelDTO\BrandDTO.cs" />
+    <Compile Include="ModelDTO\CountryDTO.cs" />
+    <Compile Include="ModelDTO\NumberStringDTO.cs" />
     <Compile Include="ModelDTO\ProductDTO.cs" />
+    <Compile Include="ModelDTO\SubcategoryDTO.cs" />
     <Compile Include="NumberString.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
