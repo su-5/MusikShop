@@ -4,13 +4,12 @@
     // controller class definintion
     var catalogController = function ($scope, $rootScope, ProductService) {
         ProductService.getListProduct().then(function (value) {
-            debugger;
-         //   $rootScope.loadingShow();
+           $rootScope.loadingShow();
             $scope.result = angular.copy(value);
         }, function (errorObject) {
 
         }).finally(function () {
-          //  $rootScope.loadingHide();
+          $rootScope.loadingHide();
         });
     };
 

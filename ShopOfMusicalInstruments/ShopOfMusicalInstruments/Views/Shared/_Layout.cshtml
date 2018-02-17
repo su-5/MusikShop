@@ -13,17 +13,17 @@
 </head>
 
 <body ng-app="Web">
-    <div class="container-fluid header">
-        <div style="float: left" class="logo"> <img src="~/Content/image/images.png" alt="logo" height="55" width="340" /></div>
+    <div style="width: 100%" class="container-fluid header">
+        <div class="logo pull-left"> <img src="~/Content/image/images.png" alt="logo" height="55" width="340" /></div>
         <div style="float: left" class="ui-grid-header">
             <h1 style="font-style: italic; color: white">
-                <a href="http://localhost:21606/">Магазин музыкальных инструментов</a>
+                <a href="/">Магазин музыкальных инструментов</a>
             </h1>
         </div>
-        <p>
+        <div style="margin-top: 6px;margin-left: 76px;                                                                                                                                                                                                                                                            margin-left: 76px;" class="pull-left">
             <a class="Login" href="http://localhost:21606/Login">Войти</a>
             <a class="Login" href="http://localhost:21606/Registration">Регистрация</a>
-        </p>
+        </div>
     </div>
 
     <div class="body-content">
@@ -33,7 +33,14 @@
             </div>
         </div>
     </div>
-
+    @*<div class="msg-overlay" ng-show="loadingIsShow">
+        <div class="msg">
+            <span>
+                Обработка данных...
+                <i class="fa fa-refresh fa-spin fa-fw"></i>
+            </span>
+        </div>
+    </div>*@
     <nav id="nav">
         <ul>
             <li>
@@ -76,9 +83,9 @@
                     <li><a href="#">Контрабас</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="top-menu">
                 <a href="#">Народные</a>
-                <ul class="second">
+                <ul  class="second">
                     <li><a href="#">Аккордеон</a></li>
                     <li><a href="#">Гармонь</a> </li>
                     <li><a href="#">Баян</a></li>

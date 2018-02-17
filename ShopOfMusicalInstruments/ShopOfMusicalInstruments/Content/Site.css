@@ -86,6 +86,10 @@ div.body-content {
     width: 227px;
 }
 
+.top-menu {
+    width: 305px !important;
+}
+
 #nav > ul li a {
     font-size: 17px;
     background: #E0E0E4;
