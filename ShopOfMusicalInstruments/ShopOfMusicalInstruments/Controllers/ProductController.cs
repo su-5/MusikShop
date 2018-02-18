@@ -7,7 +7,7 @@ using DAL.Core.ModelDTO;
 
 namespace ShopOfMusicalInstruments.Core.Controllers
 {
-    public class ProductController : ApiController
+    public class ProductController : ApiController  
     {
         private readonly MusicDataBaseEntities _db = new MusicDataBaseEntities();
         public IHttpActionResult GetProduct()
