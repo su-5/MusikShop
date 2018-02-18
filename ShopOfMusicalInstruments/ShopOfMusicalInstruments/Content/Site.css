@@ -1,8 +1,10 @@
 ﻿html, body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-image: url('image/фон-для-сайта-1024x576.jpg');
+    -ms-background-repeat: no-repeat;
     background-repeat: no-repeat;
+    -ms-background-size: 100%;
     background-size: 100%;
 }
 
@@ -10,7 +12,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: lightblue
+    background-color: lightblue;
+    left: 0;
+    height: 57px;
 }
 
 div.body-content {
@@ -41,6 +45,7 @@ div.body-content {
     top: 0;
     bottom: 0;
     width: 100%;
+    background: #000000;
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -70,6 +75,11 @@ div.body-content {
     margin: 0;
 }
 
+header {
+    font-family: Arial;
+    margin-top: 150px;
+}
+
 #nav ul {
     list-style: none;
 }
@@ -83,11 +93,7 @@ div.body-content {
 #nav > ul > li {
     float: left;
     position: relative;
-    width: 227px;
-}
-
-.top-menu {
-    width: 305px !important;
+    min-width: 16.65%;
 }
 
 #nav > ul li a {
@@ -110,7 +116,7 @@ div.body-content {
 }
 
 .block {
-    box-shadow: 0px 0px 10px 0px;
+    box-shadow: 0 0 10px 0;
     background: #fff;
     text-align: left;
 }
@@ -132,8 +138,12 @@ div.body-content {
     text-decoration: none;
     padding: 8px;
     margin-left: 10px;
+    -ms-border-radius: 5px;
     border-radius: 5px;
     background: skyblue;
     box-shadow: 0 3px rgb(48, 44, 44);
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    -webkit-transition: 0.2s;
     transition: 0.2s;
 }
