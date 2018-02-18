@@ -7,7 +7,7 @@ namespace BLL.Core.BLL_Core
     {
         public static void Configure()
         {
-            Mapper.Initialize(x => x.AddProfile<CatalogMapper>());
+            Mapper.Initialize(x => x.AddProfile<ProductMapper>());
         }
     }
 }

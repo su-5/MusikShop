@@ -4,9 +4,9 @@ using DAL.Core.ModelDTO;
 
 namespace BLL.Core.BLL_Core.Mapping
 {
-    public class CatalogMapper : Profile
+    public class ProductMapper : Profile
     {
-        public CatalogMapper()
+        public ProductMapper()
         {
             CreateMap<Product, ProductDTO>()
             .ForMember(d => d.Id, opts => opts.MapFrom(src => src.Id))

@@ -9,29 +9,34 @@
     background-size: 100%;
 }
 
+
 .footer {
     position: absolute;
     bottom: 0;
+    background-color: skyblue;
     width: 100%;
-    background-color: lightblue;
-    left: 0;
     height: 57px;
+    color: #ffffff;
+    text-align: center;
 }
+
 
 div.body-content {
     background: lightblue
 }
 
+
 .header {
     background: skyblue;
-    position: fixed;
-    top: 0
+    position: relative;
+    width: 100%;
+    top: 0;
 }
 
 .logo {
     margin: 0;
     padding: 0;
-    width: 370px;
+    max-width: 100%;
 }
 
 .wrapper {

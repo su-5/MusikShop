@@ -7,6 +7,7 @@
     <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
     <meta http-equiv="CACHE-CONTROL" content="NO-STORE">
     <title>Магазин музыкальных инструментов</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     @Scripts.Render("~/bundles/scripts", "~/Angular/main.js")
     @Styles.Render("~/Content/css")
 
@@ -15,9 +16,9 @@
 <body ng-app="Web">
     <div style="width: 100%" class="container-fluid header">
         <div class="logo pull-left"> <img src="~/Content/image/images.png" alt="logo" height="55" width="340" /></div>
-        <div style="float: left" class="ui-grid-header">
+        <div style="float: left">
             <h1 style="font-style: italic; color: white">
-                <a href="/">Магазин музыкальных инструментов</a>
+                <a href="http://localhost:21606/">Магазин музыкальных инструментов</a>
             </h1>
         </div>
         <div>
@@ -25,11 +26,10 @@
             <a class="Login" href="http://localhost:21606/Registration">Регистрация</a>
         </div>
     </div>
-
     <div class="body-content">
-        <div class="jumbotron-fluid bg-info text-white text-center" style="background: #aaa;">
+        <div class="jumbotron-fluid bg-info text-white text-center">
             <div class="container wrapper">
-                <p class="display-4" style="padding-top: 50px">Каталог товаров </p>
+                <p class="display-4" style="padding-top:10px">Каталог товаров </p>
             </div>
         </div>
     </div>
@@ -95,12 +95,12 @@
     </nav>
 
     @RenderBody()
-    <footer>
-        <div class="card-footer footer">
-            &copy; 2018 |  Проект Ткаченко Дмитрия Александровича.
-        </div>
 
-    </footer>
+    <div class="footer">
+        &copy; 2018 |  Проект Ткаченко Дмитрия Александровича.
+    </div>
+
+
 
     @RenderSection("scripts", required: false)
 </body>
