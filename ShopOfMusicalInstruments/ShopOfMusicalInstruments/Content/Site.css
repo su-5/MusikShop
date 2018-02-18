@@ -9,13 +9,16 @@
 }
 
 
+
 .footer {
     position: absolute;
     bottom: 0;
+    padding: 20px;
+    margin: 0 0 10px;
     background-color: skyblue;
     width: 100%;
     height: 57px;
-    color: #ffffff;
+    color: #E6E4E4;
     text-align: center;
 }
 
@@ -30,6 +33,8 @@ div.body-content {
     position: relative;
     width: 100%;
     top: 0;
+    margin: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -118,22 +123,6 @@ header {
     transition: all 0.4s ease;
     color: #ededf2;
     background: #4e4e4f;
-}
-
-.block {
-    box-shadow: 0 0 10px 0;
-    background: #fff;
-    text-align: left;
-}
-
-.auth {
-    text-align: center;
-    width: 100%;
-    display: inline-block;
-    font-size: 130%;
-    text-transform: uppercase;
-    color: #000;
-    margin-top: 15px;
 }
 
 .Login {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace Web
+namespace ShopOfMusicalInstruments.Core
 {
     public class BundleConfig
     {
