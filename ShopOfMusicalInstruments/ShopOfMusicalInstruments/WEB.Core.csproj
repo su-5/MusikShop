@@ -226,9 +226,13 @@
   <ItemGroup>
     <Content Include="Angular\app.js" />
     <Content Include="Angular\appConfig.js" />
+    <Content Include="Angular\Controllers\AdminPanelCtrl.js" />
     <Content Include="Angular\Controllers\CatalogCtrl.js" />
+    <Content Include="Angular\ModalWindows\ControlBrendModalMindow.html" />
+    <Content Include="Angular\Services\AdminService.js" />
     <Content Include="Angular\Services\loadingService.js" />
     <Content Include="Angular\Services\ProductService.js" />
+    <Content Include="Angular\Views\AdminPanel.html" />
     <Content Include="Angular\Views\Catalog.html" />
     <Content Include="App_Data\MusicDataBase.mdf" />
     <Content Include="App_Data\MusicDataBase_log.ldf">
@@ -258,7 +262,6 @@
     <Content Include="Content\ui-grid.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -332,6 +335,7 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1079,9 +1083,6 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />

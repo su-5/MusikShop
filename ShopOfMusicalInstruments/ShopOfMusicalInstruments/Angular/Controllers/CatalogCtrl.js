@@ -7,7 +7,7 @@
            $rootScope.loadingShow();
             $scope.result = angular.copy(value);
         }, function (errorObject) {
-
+            alert(errorObject);
         }).finally(function () {
           $rootScope.loadingHide();
         });
