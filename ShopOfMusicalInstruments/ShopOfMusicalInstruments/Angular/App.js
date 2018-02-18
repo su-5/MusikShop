@@ -3,7 +3,7 @@
 
     angular.module("Web.Services", []);
     angular.module("Web.Controllers", []);
-    angular.module("Web.Externals", ["ui.router", "ngCookies","ngTouch", "ngAnimate", "integralui"]);
+    angular.module("Web.Externals", ["ui.router", "ngCookies","ngTouch", "ngAnimate"]);
 
     var app = angular.module("Web", ["Web.Services", "Web.Externals", "Web.Controllers", "ui.bootstrap"]);
 

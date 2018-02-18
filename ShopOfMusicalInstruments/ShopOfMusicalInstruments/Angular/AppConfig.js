@@ -11,6 +11,12 @@
                 controller: "catalogController"
             });
 
-            $urlRouterProvider.otherwise("/catalog");
+            $stateProvider.state("mainPage/AdminPanel", {
+                url: "/adminPanel",
+                templateUrl: "Angular/Views/AdminPanel.html",
+                controller: "adminController"
+            });
+
+            $urlRouterProvider.otherwise("/adminPanel");
         }]);
 })();

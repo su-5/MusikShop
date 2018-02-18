@@ -21,7 +21,7 @@ namespace ShopOfMusicalInstruments.Core
                 "~/Scripts/angular-ui-ieshiv.js",
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/ui-grid.js",
-                "~/Scripts/bootbox.js",
+                "~/Scripts/bootbox.min.js",
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                 "~/Scripts/angular-ui/ui-bootstrap",
                 "~/Scripts/angular-ui.js",
@@ -40,10 +40,11 @@ namespace ShopOfMusicalInstruments.Core
                 "~/Content/ui-grid.css",
                 "~/Content/Site.css",
                 "~/Content/css/themes/theme-flat-blue.css id='theme'",
-                "~/Content/css/integralui.treeview.css",
-                "~/Content/css/integralui.css",
+               // "~/Content/css/integralui.treeview.css",
+               // "~/Content/css/integralui.css",
                 "~/Content/css/samples.css",
                 "~/Content/font-awesome.css",
+                "~/Content/ui-bootstrap-csp.css",
                 "~/Content/bootstrap.css"));
 
             //minimization AngularJs Scripts

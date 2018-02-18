@@ -1,6 +1,7 @@
 ﻿html, body {
     margin: 0;
     padding: 0;
+    min-width: 1306px;
     background-image: url('image/фон-для-сайта-1024x576.jpg');
     -ms-background-repeat: no-repeat;
     background-repeat: no-repeat;
@@ -140,4 +141,22 @@ header {
     -o-transition: 0.2s;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+}
+
+.bnt-style {
+  
+    margin-left: 3px!important;
+}
+
+.half-length {
+    margin-left: 3px!important;
+    width: 33%!important;
+}
+
+.window-style {
+    min-width: 1306px;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
 }
