@@ -47,6 +47,9 @@
     <Compile Include="BLL_Core\AutoMapperConfiguration.cs" />
     <Compile Include="BLL_Core\Interface\IBLLFactory.cs" />
     <Compile Include="BLL_Core\Interface\IProductBLL.cs" />
+    <Compile Include="BLL_Core\Mapping\BrandMapper.cs" />
+    <Compile Include="BLL_Core\Mapping\CountryMapper.cs" />
+    <Compile Include="BLL_Core\Mapping\NumberStringMapper.cs" />
     <Compile Include="BLL_Core\Mapping\ProductMapper.cs" />
     <Compile Include="BLL_Core\Repository\BLLFactory.cs" />
     <Compile Include="BLL_Core\Repository\ProductBLL.cs" />
