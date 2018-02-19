@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using BLL.Core.BLL_Core;
-using Web;
 
 namespace ShopOfMusicalInstruments.Core
 {
