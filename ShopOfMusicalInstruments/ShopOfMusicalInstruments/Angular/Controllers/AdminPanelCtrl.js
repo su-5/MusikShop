@@ -2,7 +2,7 @@
     "use strict";
 
     // controller class definintion
-    var adminController = function ($scope, $rootScope, $uibModal, adminService, countryService) {
+    var adminController = function ($scope, $rootScope, $uibModal, adminService, countryService, numberstringService) {
         //запрос на список брендов
         $rootScope.loadingShow();
         var listBrends = [];
@@ -147,7 +147,80 @@
                     $scope.gridCountries.data = listCountry;
                 }]
             }).result.then(postClose, postClose);
+
+
         }
+        //запрос на список струн
+        $rootScope.loadingShow();
+        var listnumberstrings = [];
+        numberstringService.getAll().then(function (value) {
+            listnumberstrings = angular.copy(value);
+        }, function (errorObject) {
+
+        }).finally(function () {
+            $rootScope.loadingHide();
+        });
+
+
+
+        //Modal Window для струн
+        $scope.openNumberString = function () {
+            $scope.asideState = {
+                open: true
+            };
+
+            function postClose() {
+                $scope.asideState.open = false;
+            }
+            $uibModal.open({
+                templateUrl: function () {
+                    return 'Angular/ModalWindows/ControlNumberStringModalWindow.html';
+                },
+                size: 'sm',
+                controller: ['$rootScope', '$scope', '$uibModalInstance', function ($rootScope, $scope, $uibModalInstance) {
+
+                    $scope.gridNumberStrings = { 
+                        enableColumnResizing: true,
+                        showGridFooter: true,
+                        enableHorizontalScrollbar: 0,
+                        enableVerticalScrollbar: 1,
+                        enableColumnMenus: false,
+                        showColumnFooter: false,
+                        enableFiltering: false,
+                        gridColumnFooterHeight: 20,
+                        enableRowSelection: true,
+                        enableRowHeaderSelection: false,
+                        noUnselect: false,
+                        multiSelect: false,
+                        rowHeight: 22,
+                        columnDefs: [
+
+
+                            {
+                                field: 'Number',     
+                                width: '100%',
+                                displayName: 'Номер',
+                                cellTemplate: '<p style="margin-left:120px;" >{{row.entity.Number}}</p>'
+                            }
+
+                        ],
+                        onRegisterApi: function (gridApi) {
+                            $scope.gridApi = gridApi;
+                            $scope.gridApi.selection.on.rowSelectionChanged($scope,
+                                function (row) {
+                                });
+                        }
+                    }
+
+                    $scope.cancel = function () {
+                        $uibModalInstance.dismiss({ $value: 'cancel' });
+                    };
+
+                    $scope.gridNumberStrings.data = listnumberstrings;
+                }]
+            }).result.then(postClose, postClose);
+        }
+
 
     };
 
@@ -155,7 +228,8 @@
     // register your controller into a dependent module 
     angular
         .module("Web.Controllers")
-        .controller("adminController", ["$scope", "$rootScope", "$uibModal", "adminService", "countryService", adminController]);
+        .controller("adminController", ["$scope", "$rootScope", "$uibModal", "adminService", "countryService", "numberstringService",
+            adminController]);
 
 
 })();
