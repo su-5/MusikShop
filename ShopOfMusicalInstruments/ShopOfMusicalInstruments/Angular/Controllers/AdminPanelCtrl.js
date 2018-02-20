@@ -3,17 +3,6 @@
 
     // controller class definintion
     var adminController = function ($scope, $rootScope, $uibModal, adminService, countryService) {
-        //запрос на список брендов
-        $rootScope.loadingShow();
-        var listBrends = [];
-        adminService.getAll().then(function (value) {
-            listBrends = angular.copy(value);
-        }, function (errorObject) {
-
-        }).finally(function () {
-            $rootScope.loadingHide();
-        });
-
 
         //Modal Window для брендов 
         $scope.openList = function () {
@@ -24,13 +13,14 @@
             function postClose() {
                 $scope.asideState.open = false;
             }
+
             $uibModal.open({
                 templateUrl: function () {
                     return 'Angular/ModalWindows/ControlBrendModalMindow.html';
                 },
                 size: 'lg',
                 controller: ['$rootScope', '$scope', '$uibModalInstance', function ($rootScope, $scope, $uibModalInstance) {
-
+                    $scope.brand = { Name: "", Description : ""};
                     $scope.gridBrands = {
                         enableColumnResizing: true,
                         showGridFooter: true,
@@ -67,11 +57,39 @@
                         }
                     }
 
+                    //запрос на список брендов
+                    function getAllBrends() {
+                        $rootScope.loadingShow();
+                        adminService.getAll().then(function (value) {
+                            $scope.listBrends = angular.copy(value);
+                            $scope.gridBrands.data = $scope.listBrends;
+                        }, function (errorObject) {
+
+                        }).finally(function () {
+                            $rootScope.loadingHide();
+                        });
+                    }
                     $scope.cancel = function () {
                         $uibModalInstance.dismiss({ $value: 'cancel' });
                     };
 
-                    $scope.gridBrands.data = listBrends;
+                    //открытие блока для добавления бренда
+                    $scope.openWibdowAdd = function(openModel) {
+                        $scope.openWindow = openModel;
+                    }
+
+                    //добавление бренда
+                    $scope.addBrang = function() {
+                       // $rootScope.loadingShow();
+                        adminService.add($scope.brand).then(function (value) {
+                            getAllBrends();
+                        }, function (errorObject) {
+
+                        }).finally(function () {
+                        //    $rootScope.loadingHide();
+                        }); 
+                    }
+                    getAllBrends();
                 }]
             }).result.then(postClose, postClose);
         }
@@ -148,7 +166,6 @@
                 }]
             }).result.then(postClose, postClose);
         }
-
     };
 
 

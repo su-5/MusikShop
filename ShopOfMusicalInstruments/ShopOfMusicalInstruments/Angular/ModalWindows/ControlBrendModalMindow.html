@@ -3,12 +3,25 @@
         <h3 style="margin-top: -8px;" class="text-center">
             Справочник брендов
         </h3>
+        <div ng-if="openWindow" class="modal-list-height">
+            <form>
+                <div class="pull-left distant">
+                    <input ng-required placeholder="Имя бренда" class="form-control label-size" type="text" ng-model="brand.Name"/>
+                </div>
+                <div class="pull-left distant">
+                    <input ng-required placeholder="Описание бренда" class="form-control label-size" type="text" ng-model="brand.Description" />
+                </div>
+                <div class="pull-left distant">
+                    <button style="padding: 3px 6px;" class="btn btn-xs btn-success" type="submit" ng-click="addBrang()">Добавить</button>
+                </div>
+            </form>
+        </div>
         <div id="portlet" ui-grid="gridBrands" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ng-style="{'height':300 + 'px'}">
         </div>
         <br />
         <div align="right">
-            <button class="btn btn-xs btn-info" type="button" ng-click="addBrend()">Добавить</button>
-            <button class="btn btn-xs btn-warning" type="button" ng-click="cancel()">Отмена</button>
+            <button class="btn btn-xs btn-primary" type="button" ng-click="openWibdowAdd(true)">Добавить новый бренд</button>
+            <button class="btn btn-xs btn-warning" type="button" ng-click="cancel()">Закрыть</button>
         </div>
     </div>
 </div>
