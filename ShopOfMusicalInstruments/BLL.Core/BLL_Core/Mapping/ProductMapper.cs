@@ -24,7 +24,7 @@ namespace BLL.Core.BLL_Core.Mapping
             .ForMember(d => d.Brand, opts => opts.MapFrom(src => src.Brand))
             .ForMember(d => d.Country, opts => opts.MapFrom(src => src.Country))
             .ForMember(d => d.NumberString, opts => opts.MapFrom(src => src.NumberString))
-           // .ForMember(d => d.Picture, opts => opts.MapFrom(src => src.Picture))
+            .ForMember(d => d.Picture, opts => opts.MapFrom(src => src.Picture))
             .ForMember(d => d.SubcategoriesId, opts => opts.MapFrom(src => src.SubcategoriesId))
             .ForMember(d => d.Subcategory, opts => opts.MapFrom(src => src.Subcategory));
 

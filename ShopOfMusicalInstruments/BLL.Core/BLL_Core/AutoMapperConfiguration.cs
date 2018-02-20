@@ -1,17 +1,17 @@
-﻿using AutoMapper;
-using AutoMapper.Configuration;
-using BLL.Core.BLL_Core.Mapping;
+﻿using BLL.Core.BLL_Core.Mapping;
+using static AutoMapper.Mapper;
 
 namespace BLL.Core.BLL_Core
 {
     public class AutoMapperConfiguration
     {
-        public  void Configure()
+        public static void Configure()
         {
-            Mapper.Initialize(x => x.AddProfile<ProductMapper>());
-           // Mapper.Initialize(r => r.AddProfile<NumberStringMapper>());
-            //Mapper.Initialize(x => x.AddProfile<CountryMapper>());
-           // Mapper.Initialize(x => x.AddProfile<BrandMapper>());
+            //Initialize(x => x.AddProfile<ProductMapper>());
+            //Initialize(x => x.AddProfile<NumberStringMapper>());
+            //Initialize(x => x.AddProfile<CountryMapper>());
+            //Initialize(x => x.AddProfile<BrandMapper>());
+            //Initialize(x => x.AddProfile<SubcategoryMapper>());
 
 
         }

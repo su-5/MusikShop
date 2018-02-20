@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 using AutoMapper;
@@ -14,9 +13,8 @@ namespace ShopOfMusicalInstruments.Core.Controllers
 
         public IHttpActionResult GetAll()
         {
-            List<Brand> result = _db.Brands.OrderBy(x=>x.Name).ToList();
+            var result = Mapper.Map<List<Brand>, List<BrandDTO>>(_db.Brands.ToList());
             return Ok(result);
         }
-
     }
 }
