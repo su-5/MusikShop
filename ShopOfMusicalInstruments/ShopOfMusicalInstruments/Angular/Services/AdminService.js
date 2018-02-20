@@ -12,6 +12,18 @@
                 });
             return deferred.promise;
         };
+
+        this.add = function (brend) {
+            var newBrand = { Name: brend.Name, Description: brend.Description};
+            var deferred = $q.defer();
+            $http.post("api/Brands", newBrand)
+                .then(function (response) {
+                    deferred.resolve(response.data);
+                }).catch(function onError(response) {
+                    deferred.reject(response.data);
+                });
+            return deferred.promise;
+        };
     };
 
     angular

@@ -13,5 +13,13 @@ namespace ShopOfMusicalInstruments.Core.Controllers
             var result = _db.Brands.OrderBy(x => x.Name).ToList();
             return Ok(result);
         }
+
+        [HttpPost]
+        public IHttpActionResult Add(Brand brand)
+        {
+            _db.Brands.Add(brand);
+            _db.SaveChanges();
+            return Ok();
+        }
     }
 }
