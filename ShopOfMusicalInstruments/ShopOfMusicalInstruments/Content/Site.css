@@ -1,15 +1,19 @@
 ﻿html, body {
     margin: 0;
     padding: 0;
-    min-width: 1306px;
     background-image: url('image/фон-для-сайта-1024x576.jpg');
+    -webkit-background-size: cover;
     -ms-background-repeat: no-repeat;
     background-repeat: no-repeat;
     -ms-background-size: 100%;
     background-size: 100%;
 }
 
-
+.content-style {
+    width: 100%;
+    min-width: 1300px;
+    margin: auto
+}
 
 .footer {
     position: absolute;
