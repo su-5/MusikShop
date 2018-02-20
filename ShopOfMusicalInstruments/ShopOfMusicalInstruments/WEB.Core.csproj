@@ -350,7 +350,9 @@
     <Content Include="Angular\Controllers\AdminPanelCtrl.js" />
     <Content Include="Angular\Controllers\CatalogCtrl.js" />
     <Content Include="Angular\ModalWindows\ControlBrendModalMindow.html" />
+    <Content Include="Angular\ModalWindows\ControlCountryModalWindow.html" />
     <Content Include="Angular\Services\adminService.js" />
+    <Content Include="Angular\Services\сountryService.js" />
     <Content Include="Angular\Services\loadingService.js" />
     <Content Include="Angular\Services\ProductService.js" />
     <Content Include="Angular\Views\AdminPanel.html" />

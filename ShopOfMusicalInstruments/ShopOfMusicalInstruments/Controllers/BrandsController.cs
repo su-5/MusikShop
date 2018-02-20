@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Http;
-using AutoMapper;
 using DAL.Core;
-using DAL.Core.ModelDTO;
 
 namespace ShopOfMusicalInstruments.Core.Controllers
 {
@@ -13,7 +10,7 @@ namespace ShopOfMusicalInstruments.Core.Controllers
 
         public IHttpActionResult GetAll()
         {
-            var result = Mapper.Map<List<Brand>, List<BrandDTO>>(_db.Brands.ToList());
+            var result = _db.Brands.OrderBy(x => x.Name).ToList();
             return Ok(result);
         }
     }

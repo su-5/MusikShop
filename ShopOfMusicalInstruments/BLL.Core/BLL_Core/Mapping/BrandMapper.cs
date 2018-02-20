@@ -10,6 +10,7 @@ namespace BLL.Core.BLL_Core.Mapping
         {
             CreateMap<Brand, BrandDTO>()
                 .ForMember(d => d.Id, opts => opts.MapFrom(src => src.Id));
+                
 
         }
     }

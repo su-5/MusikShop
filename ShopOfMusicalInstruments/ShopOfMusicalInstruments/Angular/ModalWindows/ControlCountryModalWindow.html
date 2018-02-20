@@ -1,0 +1,14 @@
+﻿<div>
+    <div class="modal-header">
+        <h3 style="margin-top: -8px;" class="text-center">
+            Справочник стран
+        </h3>
+        <div id="portlet" ui-grid="gridCounties" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ng-style="{'height':300 + 'px'}">
+        </div>
+        <br />
+        <div align="right">
+            <button class="btn btn-xs btn-info" type="button" ng-click="addCountry">Добавить</button>
+            <button class="btn btn-xs btn-warning" type="button" ng-click="cancel()">Отмена</button>
+        </div>
+    </div>
+</div>
