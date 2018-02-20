@@ -14,9 +14,11 @@
 </head>
 
 <body ng-app="Web">
-
+<div class="content-style">
     <div style="width: 100%" class="container-fluid header">
-        <div class="logo pull-left"> <img src="~/Content/image/images.png" alt="logo" height="70" width="340" /></div>
+        <div class="logo pull-left">
+            <img src="~/Content/image/images.png" alt="logo" height="70" width="340"/>
+        </div>
         <div style="float: left">
             <h1 style="font-style: italic; color: white">
                 <a href="http://localhost:21606/">Магазин музыкальных инструментов</a>
@@ -105,5 +107,6 @@
 
 
     @RenderSection("scripts", required: false)
+</div>
 </body>
 </html>
