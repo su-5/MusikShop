@@ -351,7 +351,9 @@
     <Content Include="Angular\Controllers\CatalogCtrl.js" />
     <Content Include="Angular\ModalWindows\ControlBrendModalMindow.html" />
     <Content Include="Angular\ModalWindows\ControlCountryModalWindow.html" />
+    <Content Include="Angular\ModalWindows\ControlNumberStringModalWindow.html" />
     <Content Include="Angular\Services\adminService.js" />
+    <Content Include="Angular\Services\numberstringService.js" />
     <Content Include="Angular\Services\сountryService.js" />
     <Content Include="Angular\Services\loadingService.js" />
     <Content Include="Angular\Services\ProductService.js" />
