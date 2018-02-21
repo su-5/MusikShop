@@ -12,6 +12,13 @@ namespace ShopOfMusicalInstruments.Core.Controllers
             var result = _db.NumberStrings.OrderBy(x => x.Number).ToList();
             return Ok(result);
         }
+        [HttpPost]
+        public IHttpActionResult Add(NumberString numberString)
+        {
+            _db.NumberStrings.Add(numberString);
+            _db.SaveChanges();
+            return Ok();
+        }
     }
 }
 

@@ -3,12 +3,30 @@
         <h3 style="margin-top: -8px;" class="text-center">
             Справочник струн
         </h3>
-        <div id="portlet" ui-grid="gridNumberStrings" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ng-style="{'height':height}">
+        <div ng-if="openWindow" class="modal-list-height">
+            <form>
+                
+                <div class="pull-left distant">
+                    <input ng-required placeholder="Номер струны" class="form-control label-size" type="text" ng-model="country.Number" />
+
+                </div>
+                <div class="pull-left distant">
+                    <button style="padding: 3px 6px;" class="btn btn-xs btn-success" type="submit" ng-click="addNumberString()">Добавить</button>
+
+                </div>
+
+            </form>
+
+        </div>
+        <div id="portlet" ui-grid="gridNumberStrings" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ng-style="{'height':300 + 'px'}">
         </div>
         <br />
         <div align="right">
-            <button class="btn btn-xs btn-info" type="button" ng-click="addNumberStrings">Добавить</button>
-            <button class="btn btn-xs btn-warning" type="button" ng-click="cancel()">Отмена</button>
+            <button class="btn btn-xs btn-primary" type="button" ng-click="openWindowAdd(true)">Добавить номер струны</button>
+            <button class="btn btn-xs btn-warning" type="button" ng-click="cancel()">
+                Закрыть
+            </button>
+
         </div>
     </div>
 </div>
