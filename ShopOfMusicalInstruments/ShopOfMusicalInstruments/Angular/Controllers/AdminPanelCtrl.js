@@ -289,17 +289,14 @@
             }).result.then(postClose, postClose);
         };
 
-
-        // register your controller into a dependent module 
-        angular
-            .module("Web.Controllers")
-            .controller("adminController",
-            ["$scope", "$rootScope", "$uibModal", "adminService", "countryService", 'numberstringService', adminController]);
-
     }
+    // register your controller into a dependent module 
+    angular
+        .module("Web.Controllers")
+        .controller("adminController",
+        ["$scope", "$rootScope", "$uibModal", "adminService","countryService", 'numberstringService', adminController]);
 
-
-});
+})();
 
 
 

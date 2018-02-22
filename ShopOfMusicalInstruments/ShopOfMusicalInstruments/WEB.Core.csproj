@@ -354,7 +354,7 @@
     <Content Include="Angular\ModalWindows\ControlNumberStringModalWindow.html" />
     <Content Include="Angular\Services\adminService.js" />
     <Content Include="Angular\Services\numberstringService.js" />
-    <Content Include="Angular\Services\сountryService.js" />
+    <Content Include="Angular\Services\countryService.js" />
     <Content Include="Angular\Services\loadingService.js" />
     <Content Include="Angular\Services\productService.js" />
     <Content Include="Angular\Views\AdminPanel.html" />
