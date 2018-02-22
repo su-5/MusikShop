@@ -1,11 +1,11 @@
-﻿(function() {
+﻿(function () {
     "use strict";
 
     // controller class definintion
-    var adminController = function($scope, $rootScope, $uibModal, adminService, countryService, numberstringService) {
+    var adminController = function ($scope, $rootScope, $uibModal, adminService, countryService, numberstringService) {
 
         //Modal Window для брендов 
-        $scope.openList = function() {
+        $scope.openList = function () {
             $scope.asideState = {
                 open: true
             };
@@ -15,12 +15,12 @@
             }
 
             $uibModal.open({
-                templateUrl: function() {
+                templateUrl: function () {
                     return 'Angular/ModalWindows/ControlBrendModalMindow.html';
                 },
                 size: 'lg',
                 controller: [
-                    '$rootScope', '$scope', '$uibModalInstance', function($rootScope, $scope, $uibModalInstance) {
+                    '$rootScope', '$scope', '$uibModalInstance', function ($rootScope, $scope, $uibModalInstance) {
                         $scope.brand = { Name: "", Description: "" };
                         $scope.gridBrands = {
                             enableColumnResizing: true,
@@ -50,10 +50,10 @@
                                     cellTemplate: '<p style="margin-left:15px;" >{{row.entity.Description}}</p>'
                                 }
                             ],
-                            onRegisterApi: function(gridApi) {
+                            onRegisterApi: function (gridApi) {
                                 $scope.gridApi = gridApi;
                                 $scope.gridApi.selection.on.rowSelectionChanged($scope,
-                                    function(row) {
+                                    function (row) {
                                     });
                             }
                         };
@@ -61,37 +61,37 @@
                         //запрос на список брендов
                         function getAllBrends() {
                             $rootScope.loadingShow();
-                            adminService.getAll().then(function(value) {
-                                    $scope.listBrends = angular.copy(value);
-                                    $scope.gridBrands.data = $scope.listBrends;
-                                },
-                                function(errorObject) {
+                            adminService.getAll().then(function (value) {
+                                $scope.listBrends = angular.copy(value);
+                                $scope.gridBrands.data = $scope.listBrends;
+                            },
+                                function (errorObject) {
 
-                                }).finally(function() {
-                                $rootScope.loadingHide();
-                            });
+                                }).finally(function () {
+                                    $rootScope.loadingHide();
+                                });
                         }
 
-                        $scope.cancel = function() {
+                        $scope.cancel = function () {
                             $uibModalInstance.dismiss({ $value: 'cancel' });
                         };
 
                         //открытие блока для добавления бренда
-                        $scope.openWindowAdd = function(openModel) {
+                        $scope.openWindowAdd = function (openModel) {
                             $scope.openWindow = openModel;
                         };
 
                         //добавление бренда
-                        $scope.addBrang = function() {
+                        $scope.addBrang = function () {
 
-                            adminService.add($scope.brand).then(function(value) {
-                                    getAllBrends();
-                                },
-                                function(errorObject) {
+                            adminService.add($scope.brand).then(function (value) {
+                                getAllBrends();
+                            },
+                                function (errorObject) {
 
-                                }).finally(function() {
+                                }).finally(function () {
 
-                            });
+                                });
                         };
                         getAllBrends();
                     }
@@ -102,7 +102,7 @@
 
         //Modal Window для стран
 
-        $scope.openCountry = function() {
+        $scope.openCountry = function () {
             $scope.asideState = {
                 open: true
             };
@@ -112,12 +112,12 @@
             }
 
             $uibModal.open({
-                templateUrl: function() {
+                templateUrl: function () {
                     return 'Angular/ModalWindows/ControlCountryModalWindow.html';
                 },
                 size: 'lg',
                 controller: [
-                    '$rootScope', '$scope', '$uibModalInstance', function($rootScope, $scope, $uibModalInstance) {
+                    '$rootScope', '$scope', '$uibModalInstance', function ($rootScope, $scope, $uibModalInstance) {
 
                         $scope.country = { Name: "", Description: "" };
                         $scope.gridCountries = {
@@ -148,10 +148,10 @@
                                     cellTemplate: '<p style="margin-left:15px;" >{{row.entity.Description}}</p>'
                                 }
                             ],
-                            onRegisterApi: function(gridApi) {
+                            onRegisterApi: function (gridApi) {
                                 $scope.gridApi = gridApi;
                                 $scope.gridApi.selection.on.rowSelectionChanged($scope,
-                                    function(row) {
+                                    function (row) {
                                     });
                             }
                         };
@@ -159,37 +159,37 @@
                         //запрос на список стран
                         function getAllCountries() {
                             $rootScope.loadingShow();
-                            countryService.getAll().then(function(value) {
-                                    $scope.listCountry = angular.copy(value);
-                                    $scope.gridCountries.data = $scope.listCountry;
-                                },
-                                function(errorObject) {
+                            countryService.getAll().then(function (value) {
+                                $scope.listCountry = angular.copy(value);
+                                $scope.gridCountries.data = $scope.listCountry;
+                            },
+                                function (errorObject) {
 
-                                }).finally(function() {
-                                $rootScope.loadingHide();
-                            });
+                                }).finally(function () {
+                                    $rootScope.loadingHide();
+                                });
                         }
 
-                        $scope.cancel = function() {
+                        $scope.cancel = function () {
                             $uibModalInstance.dismiss({ $value: 'cancel' });
                         };
 
                         //открытие блока для добавления страны 
-                        $scope.openWindowAdd = function(openModel) {
+                        $scope.openWindowAdd = function (openModel) {
                             $scope.openWindow = openModel;
                         };
 
                         //добавление страны
-                        $scope.addCountry = function() {
+                        $scope.addCountry = function () {
 
-                            countryService.add($scope.country).then(function(value) {
-                                    getAllCountries();
-                                },
-                                function(errorObject) {
+                            countryService.add($scope.country).then(function (value) {
+                                getAllCountries();
+                            },
+                                function (errorObject) {
 
-                                }).finally(function() {
+                                }).finally(function () {
 
-                            });
+                                });
                         };
                         getAllCountries();
                     }
@@ -232,7 +232,7 @@
                             multiSelect: false,
                             rowHeight: 22,
                             columnDefs: [
-                              
+
                                 {
                                     field: 'Number',
                                     width: '100%',
@@ -294,10 +294,11 @@
         angular
             .module("Web.Controllers")
             .controller("adminController",
-                ["$scope", "$rootScope", "$uibModal", "adminService", "countryService", 'numberstringService', adminController]);
-
+            ["$scope", "$rootScope", "$uibModal", "adminService", "countryService", 'numberstringService', adminController]);
 
     }
+
+
 });
 
 

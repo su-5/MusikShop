@@ -356,7 +356,7 @@
     <Content Include="Angular\Services\numberstringService.js" />
     <Content Include="Angular\Services\сountryService.js" />
     <Content Include="Angular\Services\loadingService.js" />
-    <Content Include="Angular\Services\ProductService.js" />
+    <Content Include="Angular\Services\productService.js" />
     <Content Include="Angular\Views\AdminPanel.html" />
     <Content Include="Angular\Views\Catalog.html" />
     <Content Include="App_Data\MusicDataBase.mdf" />

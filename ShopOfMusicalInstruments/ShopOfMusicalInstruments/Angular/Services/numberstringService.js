@@ -25,10 +25,11 @@
             });
         return deferred.promise;
     };
-});
-
-
     angular
         .module("Web.Services")
         .service("numberstringService", ["$cookies", "$http", "$rootScope", "$q", numberstringService]);
 
+})();
+
+
+  

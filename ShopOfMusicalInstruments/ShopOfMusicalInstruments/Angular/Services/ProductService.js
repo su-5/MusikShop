@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    function ProductService($cookies, $http, $rootScope, $q) {
+    function productService($cookies, $http, $rootScope, $q) {
         this.getListProduct = function () {
             var deferred = $q.defer();
             $http.get('api/Product')
@@ -16,6 +16,6 @@
 
     angular
         .module("Web.Services")
-        .service("ProductService", ["$cookies", "$http", "$rootScope", "$q", ProductService]);
+        .service("productService", ["$cookies", "$http", "$rootScope", "$q", productService]);
 
 })(); 

@@ -22,6 +22,15 @@ namespace ShopOfMusicalInstruments.Core.Controllers
             return Ok();
         }
 
-
+        public IHttpActionResult Delete(int id)
+        {
+            Brand objectBrand = _db.Brands.Find(id);
+            if (objectBrand != null)
+            {
+                _db.Brands.Remove(objectBrand);
+                _db.SaveChanges();
+            }
+            return Ok();
+        }
     }
 }
