@@ -216,7 +216,7 @@
                 controller: [
                     '$rootScope', '$scope', '$uibModalInstance', function ($rootScope, $scope, $uibModalInstance) {
 
-                        $scope.numberstring = { Number: "" };
+                        $scope.numberString = "";
                         $scope.gridNumberStrings = {
                             enableColumnResizing: true,
                             showGridFooter: true,
@@ -237,7 +237,7 @@
                                     field: 'Number',
                                     width: '100%',
                                     displayName: 'Номер',
-                                    cellTemplate: '<p style="margin-left:15px;" >{{row.entity.Number}}</p>'
+                                    cellTemplate: '<p style="margin-left:150px;" >{{row.entity.Number}}</p>'
                                 }
                             ],
                             onRegisterApi: function (gridApi) {
@@ -273,8 +273,8 @@
 
                         //добавление струны
                         $scope.addNumberString = function () {
-
-                            numberstringService.add($scope.numberstring).then(function (value) {
+                            debugger;
+                            numberstringService.add($scope.numberString).then(function (value) {
                                 getAllNumberStrings();
                             },
                                 function (errorObject) {
